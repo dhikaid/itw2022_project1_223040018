@@ -1,0 +1,431 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+/* container */
+.container {
+  width: 60%;
+  margin: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.navbar {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 40%;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 0.8em;
+}
+
+nav a:hover {
+  color: rgb(18, 93, 233);
+  border-bottom: 1px solid rgb(18, 93, 233);
+}
+
+.jumbotron {
+  background-color: rgb(220, 233, 245);
+  padding: 180px 0;
+}
+
+.jumbotron .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.jumbotron .container img {
+  width: 400px;
+  border-radius: 50%;
+}
+
+.jumbotron .perkenalan .jumbotron-bhadrika {
+  color: rgb(18, 93, 233);
+}
+.jumbotron .perkenalan h1 {
+  font-size: 4em;
+}
+
+.jumbotron .perkenalan h2 {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.jumbotron .perkenalan .btn-hubungi {
+  background-color: rgb(18, 93, 233);
+  color: white;
+  padding: 15px;
+  font-size: 15px;
+  border-radius: 20px;
+}
+
+.judul-section {
+  font-size: 2em;
+  color: rgb(18, 93, 233);
+  text-decoration: overline;
+}
+
+.about {
+  padding: 50px 0;
+}
+
+.about .about-me {
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.2em;
+  /* background-color: antiquewhite; */
+  gap: 100px;
+  /* padding-bottom: 30px; */
+}
+
+.about .about-me .about-me-img img {
+  width: 300px;
+  border-radius: 20px;
+}
+
+.about .about-me .about-me-des ul {
+  display: flex;
+  list-style: none;
+  padding-top: 10px;
+}
+
+.about .about-me .about-me-des ul li {
+  /* margin-left: 20px; */
+  padding-right: 20px;
+  font-size: 40px;
+}
+.about .about-me .about-me-des ul li a {
+  color: rgb(88, 88, 88);
+}
+
+.about .about-me .about-me-des ul li i:hover {
+  color: rgb(18, 93, 233);
+}
+
+.skills {
+  background-color: rgb(220, 233, 245);
+  padding: 50px 0;
+  height: 300px;
+}
+
+.skills .skills-list {
+  font-size: 1.2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.skills .skills-list ul {
+  list-style: none;
+  color: rgb(88, 88, 88);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.skills .skills-list ul li i {
+  font-size: 80px;
+}
+
+.skills .skills-list ul li i:hover {
+  color: rgb(18, 93, 233);
+}
+
+.skills .skills-list ul li {
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px;
+  margin-left: 30px;
+}
+
+.projects {
+  background-color: white;
+  padding: 50px 0;
+}
+
+.projects .projects-list {
+  display: flex;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.projects .projects-list img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.projects .projects-list .project {
+  background-color: rgb(220, 233, 245);
+  padding: 30px;
+  width: 30%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.contact {
+  background-color: rgb(220, 233, 245);
+  padding: 50px 0;
+}
+
+.contact .container {
+  width: 30%;
+}
+
+.contact form {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact form p {
+  align-self: start;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.contact input,
+textarea {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.contact textarea {
+  height: 120px;
+  resize: none;
+}
+
+.contact input:focus,
+textarea:focus {
+  outline: none;
+}
+
+.contact input[type="submit"] {
+  background-color: white;
+  width: 50%;
+  align-self: end;
+  transition: 1s;
+}
+
+.contact input[type="submit"]:hover,
+.contact input[type="submit"]:active {
+  background-color: rgb(18, 93, 233);
+  color: white;
+}
+
+.footer {
+  height: 50px;
+  background-color: black;
+  color: white;
+  padding-top: 25px;
+}
+
+/* Hamburger */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  /* background-color: black; */
+  position: relative;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -5px;
+  top: -3px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: black;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+/* ham animation */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: rgb(18, 93, 233);
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+  background-color: rgb(18, 93, 233);
+  transform: rotate(-45deg) translate(-1px, 0px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+}
+
+/* RESPONSIVE */
+
+/* tablet */
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    width: 70%;
+  }
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+  .jumbotron {
+    padding-bottom: 150px;
+  }
+  .jumbotron .perkenalan h1 {
+    font-size: 3em;
+  }
+  .jumbotron .perkenalan h2 {
+    font-size: 1.3em;
+  }
+  .jumbotron .perkenalan .btn-hubungi {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .jumbotron .container img {
+    display: none;
+  }
+  .about .about-me {
+    font-size: 1em;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .about .about-me .about-me-img img {
+    max-width: 100%;
+    height: auto;
+  }
+  .about .about-me .about-me-img {
+    align-self: center;
+  }
+
+  .about .about-me .about-me-des {
+    align-self: start;
+  }
+
+  .about .about-me .about-me-des ul li {
+    font-size: 30px;
+  }
+
+  .skills .skills-list {
+    font-size: 1em;
+    flex-direction: column;
+  }
+  .skills .skills-list .skills-list-1 {
+    align-self: start;
+  }
+  .skills .skills-list ul li {
+    display: block;
+    justify-content: center;
+  }
+  .skills .skills-list ul li i {
+    font-size: 2em;
+    align-self: start;
+  }
+  .projects .projects-list .project {
+    width: 100%;
+  }
+  .contact .container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    z-index: -100;
+    transform: translateY(-100%);
+    transition: all 1s;
+  }
+
+  nav ul li a {
+    font-size: 1.5em;
+  }
+
+  nav ul.slide {
+    transform: translateY(0%);
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+/* transisi */
+
+@keyframes underLine {
+  0% {
+    background-color: rgb(18, 93, 233);
+    width: 0;
+    height: 5px;
+  }
+  100% {
+    background-color: rgb(18, 93, 233);
+    width: 100%;
+    height: 5px;
+  }
+}
