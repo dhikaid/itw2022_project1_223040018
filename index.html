@@ -54,7 +54,8 @@
       <div class="container">
         <div class="perkenalan" data-aos="fade-up" data-aos-duration="1000">
           <h1>
-            Halo, <br />Saya <span class="jumbotron-bhadrika">Bhadrika A.</span>
+            Halo, <br />Saya
+            <span class="jumbotron-bhadrika" id="jumbotron-bhadrika"></span>
           </h1>
           <h2>Web Programmer & Editor.</h2>
           <a href="#contact" class="btn-hubungi"><b>Hubungi Saya</b></a>
@@ -231,12 +232,20 @@
       <p>&copy; 2022 Bhadrika A.</p>
     </footer>
     <!-- js -->
-    <script src="js/script.js"></script>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
     <script src="js/particles.js"></script>
     <script src="js/app.js"></script>
+    <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+
+    <!-- own js -->
+    <script>
+      var tanggalSkrng = Date.now();
+      console.log("js/script.js?t=" + tanggalSkrng);
+    </script>
+    <script src="js/script.js?t=" + tanggalSkrng></script>
   </body>
 </html>
