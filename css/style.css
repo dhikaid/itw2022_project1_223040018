@@ -23,6 +23,10 @@ body {
   text-align: center;
 }
 
+.hilang-element {
+  display: none;
+}
+
 .navbar {
   background-color: white;
   position: fixed;
@@ -229,6 +233,7 @@ textarea {
   border: none;
   border-radius: 10px;
   padding: 10px;
+  font-family: "Poppins", sans-serif;
 }
 
 .contact textarea {
@@ -252,6 +257,17 @@ textarea:focus {
 .contact input[type="submit"]:active {
   background-color: rgb(18, 93, 233);
   color: white;
+}
+
+.success-form {
+  margin: auto;
+  margin-top: 30px;
+  background-color: rgb(253, 255, 111);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .footer {

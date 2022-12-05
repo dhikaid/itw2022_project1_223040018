@@ -88,3 +88,68 @@ new TypeIt("#jumbotron-bhadrika", {
   .pause(29)
   .delete(1)
   .go();
+
+// CONTACT
+
+const formContact = document.getElementById("form_contact");
+
+const btnKirim = document.getElementById("kirim_contact");
+const namaKontak = document.getElementById("nama_contact");
+const emailKontak = document.getElementById("email_contact");
+const pesanKontak = document.getElementById("pesan_contact");
+const successAlert = document.getElementById("alert-success");
+
+btnKirim.addEventListener("click", function () {
+  if (!namaKontak.value || !emailKontak.value || !pesanKontak.value) {
+    console.log("NO INPUT");
+  } else {
+    btnKirim.value = "Loading...";
+    btnKirim.disabled = true;
+    namaKontak.disabled = true;
+    emailKontak.disabled = true;
+    pesanKontak.disabled = true;
+
+    var discord = discord_message(
+      namaKontak.value + " | " + emailKontak.value,
+      pesanKontak.value
+    );
+
+    if (discord == "OK!") {
+      setTimeout(successDiscord, 2000);
+    }
+  }
+});
+
+// SEND TO DISCORD
+function discord_message(username, message) {
+  var xhr = new XMLHttpRequest();
+  xhr.open(
+    "POST",
+    "https://discord.com/api/webhooks/1048034339839016980/33QzUiBXtNLoWOjKmgdgZ5YVPGqBPDsmToHmK-Zcsi7A26qN8LRolkNDObGKodwereSM",
+    true
+  );
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.send(
+    JSON.stringify({
+      content: message,
+      username: username,
+    })
+  );
+  return "OK!";
+}
+
+function successDiscord() {
+  console.log("MASUK TO DISCORD");
+  btnKirim.value = "Kirim";
+  btnKirim.disabled = false;
+  namaKontak.disabled = false;
+  namaKontak.value = "";
+  emailKontak.disabled = false;
+  emailKontak.value = "";
+  pesanKontak.disabled = false;
+  pesanKontak.value = "";
+  successAlert.classList.add("success-form");
+  setTimeout(function () {
+    successAlert.classList.remove("success-form");
+  }, 4000);
+}
