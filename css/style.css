@@ -69,8 +69,7 @@ nav a:hover {
 }
 
 .jumbotron .container img {
-  width: 400px;
-  border-radius: 50%;
+  width: 500px;
 }
 
 .jumbotron .perkenalan .jumbotron-bhadrika {
@@ -331,9 +330,22 @@ textarea:focus {
 
 /* RESPONSIVE */
 
+/* akal img */
+@media screen and (max-width: 1450px) {
+  .jumbotron .perkenalan h1 {
+    font-size: 2.5em;
+  }
+  .jumbotron .perkenalan h2 {
+    font-size: 1.3em;
+  }
+  .jumbotron .container img {
+    width: 350px;
+  }
+}
+
 /* tablet */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 990px) {
   nav ul {
     width: 70%;
   }
@@ -391,7 +403,7 @@ textarea:focus {
     justify-content: center;
   }
   .skills .skills-list ul li i {
-    font-size: 2em;
+    font-size: 4em;
     align-self: start;
   }
   .projects .projects-list .project {
@@ -428,6 +440,16 @@ textarea:focus {
 
   .menu-toggle {
     display: flex;
+  }
+  .skills .skills-list ul li i {
+    font-size: 2em;
+  }
+}
+
+/* galaxy fold */
+@media screen and (max-width: 280px) {
+  .skills .skills-list ul li i {
+    font-size: 1em;
   }
 }
 
