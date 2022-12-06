@@ -99,6 +99,12 @@ const emailKontak = document.getElementById("email_contact");
 const pesanKontak = document.getElementById("pesan_contact");
 const successAlert = document.getElementById("alert-success");
 
+// nama kontak paksa capital
+namaKontak.addEventListener("input", function () {
+  console.log(namaKontak.value.toUpperCase());
+  namaKontak.value = namaKontak.value.toUpperCase();
+});
+
 btnKirim.addEventListener("click", function () {
   if (!namaKontak.value || !emailKontak.value || !pesanKontak.value) {
     console.log("NO INPUT");
