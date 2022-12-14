@@ -91,7 +91,7 @@ new TypeIt("#jumbotron-bhadrika", {
 
 // CONTACT
 
-const formContact = document.getElementById("form_contact");
+const formContact = document.forms["contact-form"];
 
 const btnKirim = document.getElementById("kirim_contact");
 const namaKontak = document.getElementById("nama_contact");
@@ -105,7 +105,8 @@ namaKontak.addEventListener("input", function () {
   namaKontak.value = namaKontak.value.toUpperCase();
 });
 
-btnKirim.addEventListener("click", function () {
+formContact.addEventListener("submit", function (e) {
+  e.preventDefault();
   if (!namaKontak.value || !emailKontak.value || !pesanKontak.value) {
     console.log("NO INPUT");
   } else {
