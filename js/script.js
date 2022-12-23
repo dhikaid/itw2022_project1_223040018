@@ -1,10 +1,12 @@
 // LOAD
 document.onreadystatechange = function () {
   if (document.readyState !== "complete") {
+    document.querySelector("html").style.overflowY = "hidden";
     document.querySelector("body").style.visibility = "hidden";
     document.querySelector(".load-page").style.visibility = "visible";
   } else {
     document.querySelector(".load-page").style.display = "none";
+    document.querySelector("html").style.overflowY = "scroll";
     document.querySelector("body").style.visibility = "visible";
   }
 };

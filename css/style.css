@@ -333,10 +333,10 @@ textarea:focus {
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  z-index: 1000;
+  background-color: white;
+  height: 100%;
+  width: 100%;
 }
 
 .load-page .bulet {
@@ -346,6 +346,7 @@ textarea:focus {
   border-radius: 50%;
   margin: 20px;
   opacity: 0.2;
+  align-self: center;
 }
 
 .load-page .bulet1 {
