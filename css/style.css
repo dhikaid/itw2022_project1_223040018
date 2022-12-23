@@ -340,7 +340,7 @@ textarea:focus {
 }
 
 .load-page .bulet {
-  background-color: blue;
+  background-color: rgb(18, 93, 233);
   width: 30px;
   height: 30px;
   border-radius: 50%;
