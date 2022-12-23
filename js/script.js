@@ -6,8 +6,8 @@ document.onreadystatechange = function () {
     document.querySelector(".load-page").style.visibility = "visible";
   } else {
     document.querySelector(".load-page").style.display = "none";
-    document.querySelector("html").style.overflowY = "scroll";
     document.querySelector("body").style.visibility = "visible";
+    document.querySelector("html").style.overflowY = "scroll";
   }
 };
 // INPUT BTN
