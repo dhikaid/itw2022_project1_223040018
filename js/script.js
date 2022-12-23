@@ -1,3 +1,13 @@
+// LOAD
+document.onreadystatechange = function () {
+  if (document.readyState !== "complete") {
+    document.querySelector("body").style.visibility = "hidden";
+    document.querySelector(".load-page").style.visibility = "visible";
+  } else {
+    document.querySelector(".load-page").style.display = "none";
+    document.querySelector("body").style.visibility = "visible";
+  }
+};
 // INPUT BTN
 
 const menuToggle = document.querySelector(".menu-toggle input");
