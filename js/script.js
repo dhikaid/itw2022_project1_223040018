@@ -1,15 +1,42 @@
 // LOAD
-document.onreadystatechange = function () {
-  if (document.readyState !== "complete") {
-    document.querySelector("html").style.overflowY = "hidden";
-    document.querySelector("body").style.visibility = "hidden";
-    document.querySelector(".load-page").style.visibility = "visible";
-  } else {
-    document.querySelector(".load-page").style.display = "none";
+// document.onreadystatechange = function () {
+//   if (document.readyState !== "complete") {
+//     document.querySelector("html").style.overflowY = "hidden";
+//     document.querySelector("body").style.visibility = "hidden";
+//     document.querySelector(".load-page").style.visibility = "visible";
+//   } else {
+//     document.querySelector(".load-page").style.display = "none";
+//     document.querySelector("body").style.visibility = "visible";
+//     document.querySelector("html").style.overflowY = "scroll";
+//   }
+// };
+
+window.addEventListener("load", (event) => {
+  document.querySelector("html").style.overflowY = "hidden";
+  document.querySelector("body").style.visibility = "hidden";
+  document.querySelector(".load-page").style.visibility = "visible";
+
+  setTimeout(function () {
+    stopLoad();
     document.querySelector("body").style.visibility = "visible";
     document.querySelector("html").style.overflowY = "scroll";
-  }
-};
+  }, 2000);
+});
+
+function stopLoad() {
+  var loadPage = document.querySelector(".load-page");
+  var fadeEffect = setInterval(function () {
+    if (!loadPage.style.opacity) {
+      loadPage.style.opacity = 1;
+    }
+    if (loadPage.style.opacity > 0) {
+      loadPage.style.opacity -= 0.1;
+    } else {
+      clearInterval(fadeEffect);
+    }
+  }, 50);
+}
+
 // INPUT BTN
 
 const menuToggle = document.querySelector(".menu-toggle input");
