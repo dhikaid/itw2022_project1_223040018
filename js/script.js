@@ -20,11 +20,14 @@ window.addEventListener("load", (event) => {
 
   setTimeout(function () {
     stopLoad();
-    document.querySelector("html").style.scrollBehavior = "smooth";
+  }, 2000);
 
+  setTimeout(function () {
+    document.querySelector(".load-page").style.display = "none";
+    document.querySelector("html").style.scrollBehavior = "smooth";
     document.querySelector("body").style.visibility = "visible";
     document.querySelector("html").style.overflowY = "scroll";
-  }, 2000);
+  }, 2200);
 });
 
 function stopLoad() {
@@ -38,7 +41,7 @@ function stopLoad() {
     } else {
       clearInterval(fadeEffect);
     }
-  }, 50);
+  }, 20);
 }
 
 // INPUT BTN
