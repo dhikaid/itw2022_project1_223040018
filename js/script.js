@@ -12,12 +12,16 @@
 // };
 
 window.addEventListener("load", (event) => {
+  document.querySelector("html").style.scrollBehavior = "initial";
+  window.scrollTo(0, 0);
   document.querySelector("html").style.overflowY = "hidden";
   document.querySelector("body").style.visibility = "hidden";
   document.querySelector(".load-page").style.visibility = "visible";
 
   setTimeout(function () {
     stopLoad();
+    document.querySelector("html").style.scrollBehavior = "smooth";
+
     document.querySelector("body").style.visibility = "visible";
     document.querySelector("html").style.overflowY = "scroll";
   }, 2000);
