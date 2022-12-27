@@ -182,7 +182,7 @@ function discord_message(username, message) {
       console.log(xml.responseText);
     }
   };
-  xml.open("POST", "http://localhost/phptweet/webhook.php", false);
+  xml.open("POST", "https://apiv2.bhadrikais.my.id/webhook.php", false);
   xml.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xml.send(params);
   return "OK!";
