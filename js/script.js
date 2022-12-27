@@ -176,15 +176,18 @@ formContact.addEventListener("submit", function (e) {
 // SEND TO DISCORD
 function discord_message(username, message) {
   var params = "username=" + username + "&message=" + message;
-  var xml = new XMLHttpRequest();
-  xml.onreadystatechange = function () {
-    if (xml.readyState == 4 && xml.status == 200) {
-      console.log(xml.responseText);
+  const url = "https://apiv2.bhadrikais.my.id/webhook.php";
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", url, true);
+  xhr.setRequestHeader(
+    "Content-type",
+    "application/x-www-form-urlencoded; charset=UTF-8"
+  );
+  xhr.send(params);
+  xhr.onload = function () {
+    if (xhr.status === 200) {
     }
   };
-  xml.open("POST", "https://apiv2.bhadrikais.my.id/webhook.php", false);
-  xml.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xml.send(params);
   return "OK!";
 }
 
