@@ -175,19 +175,16 @@ formContact.addEventListener("submit", function (e) {
 
 // SEND TO DISCORD
 function discord_message(username, message) {
-  var xhr = new XMLHttpRequest();
-  xhr.open(
-    "POST",
-    "https://discord.com/api/webhooks/1048034339839016980/33QzUiBXtNLoWOjKmgdgZ5YVPGqBPDsmToHmK-Zcsi7A26qN8LRolkNDObGKodwereSM",
-    true
-  );
-  xhr.setRequestHeader("Content-Type", "application/json");
-  xhr.send(
-    JSON.stringify({
-      content: message,
-      username: username,
-    })
-  );
+  var params = "username=" + username + "&message=" + message;
+  var xml = new XMLHttpRequest();
+  xml.onreadystatechange = function () {
+    if (xml.readyState == 4 && xml.status == 200) {
+      console.log(xml.responseText);
+    }
+  };
+  xml.open("POST", "http://localhost/phptweet/webhook.php", false);
+  xml.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xml.send(params);
   return "OK!";
 }
 
