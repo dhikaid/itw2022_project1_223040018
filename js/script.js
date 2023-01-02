@@ -17,6 +17,16 @@ window.addEventListener("load", (event) => {
   document.querySelector("html").style.overflowY = "hidden";
   document.querySelector("body").style.visibility = "hidden";
   document.querySelector(".load-page").style.visibility = "visible";
+  // kirim ip
+  fetch("https://ipapi.co/json/")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data.ip);
+      discord_message(
+        "Seseorang mengunjungi website anda!",
+        data.ip + " | " + data.city
+      );
+    });
 
   setTimeout(function () {
     stopLoad();
