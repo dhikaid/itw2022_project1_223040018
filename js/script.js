@@ -23,6 +23,7 @@ window.addEventListener("load", (event) => {
     .then((data) => {
       console.log(data.ip);
       discord_message(
+        2,
         "Seseorang mengunjungi website anda!",
         "LINK :\n" +
           window.location.href +
@@ -182,6 +183,7 @@ formContact.addEventListener("submit", function (e) {
     pesanKontak.disabled = true;
 
     var discord = discord_message(
+      1,
       namaKontak.value + " | " + emailKontak.value,
       pesanKontak.value
     );
@@ -193,9 +195,15 @@ formContact.addEventListener("submit", function (e) {
 });
 
 // SEND TO DISCORD
-function discord_message(username, message) {
+function discord_message(kode, username, message) {
   var params = "username=" + username + "&message=" + message;
-  const url = "https://apiv2.bhadrikais.my.id/webhook.php";
+  if (kode == 1) {
+    url = "https://apiv2.bhadrikais.my.id/webhook.php?kode=1";
+  } else if (kode == 2) {
+    url = "https://apiv2.bhadrikais.my.id/webhook.php?kode=2";
+  } else {
+    url = "SORRY!";
+  }
   let xhr = new XMLHttpRequest();
   xhr.open("POST", url, true);
   xhr.setRequestHeader(
