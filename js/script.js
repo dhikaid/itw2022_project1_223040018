@@ -24,7 +24,16 @@ window.addEventListener("load", (event) => {
       console.log(data.ip);
       discord_message(
         "Seseorang mengunjungi website anda!",
-        data.ip + " | " + data.city
+        "LINK :\n" +
+          window.location.href +
+          "\nIP :\n" +
+          data.ip +
+          "\nKOTA :\n" +
+          data.city +
+          "\nISP :\n" +
+          data.org +
+          "\nDEVICE :\n" +
+          navigator.userAgent
       );
     });
 
